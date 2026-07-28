@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lysamturbo.co.zw/sitemap.xml
