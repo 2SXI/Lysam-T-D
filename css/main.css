@@ -1190,8 +1190,6 @@ ul, ol { list-style: none; }
   height: 30px;
   width: auto;
   margin-bottom: var(--sp-4);
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
 }
 .footer-brand-desc {
   font-size: 13px;
