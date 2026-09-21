@@ -1476,6 +1476,14 @@ img[loading="lazy"] {
   h1,h2,h3 { page-break-after: avoid; }
   .container { max-width: 100%; padding: 0; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+  /* Scroll-reveal animations never fire during print/PDF rendering (no
+     scroll events), so force all reveal-gated content to its visible
+     end-state — otherwise most sections render blank on the page. */
+  .reveal, .reveal-d1, .reveal-d2, .reveal-d3, .reveal-d4 {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
