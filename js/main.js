@@ -17,13 +17,10 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Mark current page link
-  const links = nav.querySelectorAll('.nav-links a');
-  links.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && window.location.pathname.endsWith(href)) {
-      link.setAttribute('aria-current', 'page');
-    }
+  // Mark current page link (desktop + mobile menu)
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a, .mobile-nav-links a').forEach(link => {
+    if (link.getAttribute('href') === path) link.setAttribute('aria-current', 'page');
   });
 })();
 
@@ -37,12 +34,16 @@
 
   function openMenu() {
     drawer.classList.add('is-open');
+    document.body.classList.add('menu-open');
     toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close navigation menu');
     document.body.style.overflow = 'hidden';
   }
   function closeMenu() {
     drawer.classList.remove('is-open');
+    document.body.classList.remove('menu-open');
     toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open navigation menu');
     document.body.style.overflow = '';
   }
 
@@ -57,6 +58,9 @@
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && drawer.classList.contains('is-open')) closeMenu();
   });
+
+  // Close automatically if the window grows past the mobile breakpoint
+  window.matchMedia('(min-width: 901px)').addEventListener('change', e => { if (e.matches) closeMenu(); });
 
   // Close on outside click
   document.addEventListener('click', e => {
@@ -211,22 +215,6 @@
   });
 })();
 
-/* --------------------------------------------------------------------------
-   6. PROCESS STEP — hover interaction
-   -------------------------------------------------------------------------- */
-(function initProcessSteps() {
-  const steps = document.querySelectorAll('.process-step');
-  steps.forEach(step => {
-    step.addEventListener('mouseenter', () => {
-      step.querySelector('.step-num')?.classList.add('is-active');
-    });
-    step.addEventListener('mouseleave', () => {
-      if (!step.querySelector('.step-num.default-active')) {
-        step.querySelector('.step-num')?.classList.remove('is-active');
-      }
-    });
-  });
-})();
 
 /* --------------------------------------------------------------------------
    7. LAZY LOAD — native with fallback
@@ -249,4 +237,35 @@
     });
   });
   images.forEach(img => obs.observe(img));
+})();
+
+/* --------------------------------------------------------------------------
+   8. JUMP NAV — highlight the section in view (services page)
+   -------------------------------------------------------------------------- */
+(function initJumpNav() {
+  const nav = document.getElementById('jump-nav');
+  if (!nav || !('IntersectionObserver' in window)) return;
+
+  const links = [...nav.querySelectorAll('a[href^="#"]')];
+  const map = new Map();
+  links.forEach(a => {
+    const sec = document.querySelector(a.getAttribute('href'));
+    if (sec) map.set(sec, a);
+  });
+
+  const list = nav.querySelector('.jump-list');
+  const setActive = link => {
+    links.forEach(l => l.classList.toggle('is-active', l === link));
+    // keep the active chip visible inside the horizontally scrolling bar
+    if (list && link) {
+      const left = link.offsetLeft - (list.clientWidth - link.offsetWidth) / 2;
+      list.scrollTo({ left, behavior: 'smooth' });
+    }
+  };
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) setActive(map.get(e.target)); });
+  }, { rootMargin: '-35% 0px -55% 0px' });
+
+  map.forEach((_, sec) => obs.observe(sec));
 })();

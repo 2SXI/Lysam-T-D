@@ -80,3 +80,17 @@ All WhatsApp links use `+263773125505`. To change:
 - ✅ prefers-reduced-motion respected
 - ✅ Form error messages use role="alert"
 - ✅ Semantic HTML5 (header, nav, main, footer, article, section)
+
+---
+
+## Design refresh v3 (mobile-first)
+
+- **css/main.css** fully rewritten: dark/lime industrial look, mobile-first, no inline styles in any page.
+- **Fonts are now self-hosted** in `/fonts` (Barlow Condensed + Inter). No Google Fonts request.
+- **Mobile:** full-screen menu, sticky Call / WhatsApp / Quote bar, 16px form inputs (no iOS zoom),
+  swipeable reference cards, vertical process timeline, jump-nav on the Services page.
+- **Images:** `turbocharger-rebuild-harare.jpg` replaces the placeholder turbo graphic. The About page
+  banner placeholder was replaced by a gallery of real photos.
+  **To do:** `images/lysam-workshop-harare.jpg` and `images/turbocharger-repair-harare.jpg` are still
+  "replace with photo" placeholders (now unused). Drop in real shots when you have them.
+- Content is unchanged. Service cards on the homepage now deep-link to their section on the Services page.

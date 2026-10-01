@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="index, follow">
 <title>About Lysam Turbo & Diesel | Harare Engineering Specialists</title>
 <meta name="description" content="Learn about Lysam Turbo and Diesel — a Zimbabwean-owned engineering company founded in Harare in 2021 by qualified diesel and mechanical engineers.">
@@ -22,9 +22,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="css/main.css">
 <script type="application/ld+json">{
   "@context":"https://schema.org",
@@ -51,27 +51,34 @@
     <a class="nav-logo" href="index.html" aria-label="Lysam Turbo &amp; Diesel — home">
       <img src="images/logo.png" alt="Lysam Turbo and Diesel logo" width="160" height="54">
     </a>
-    <nav class="nav-links" aria-label="Main navigation"><a href="index.html">Home</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="about.html" aria-current="page">About</a>
-      <a href="contact.html">Contact</a></nav>
+      <a href="contact.html">Contact</a>
+    </nav>
     <div class="nav-actions">
       <a class="nav-phone" href="tel:+263773125505">0773 125 505</a>
       <a class="btn btn-primary" href="contact.html">Get a quote</a>
     </div>
-    <button class="nav-toggle" id="nav-toggle" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open navigation menu">
-      <div class="hamburger-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+    <button class="nav-toggle" id="nav-toggle" type="button"
+            aria-controls="mobile-nav" aria-expanded="false"
+            aria-label="Open navigation menu">
+      <span class="hamburger-bars" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
   </div>
 </header>
 <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
   <div class="mobile-nav-links">
-    <a href="index.html">Home</a><a href="services.html">Services</a>
-    <a href="about.html">About us</a><a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About us</a>
+    <a href="contact.html">Contact</a>
   </div>
   <div class="mobile-nav-cta">
-    <a class="btn btn-primary" href="contact.html" style="justify-content:center">Get a quote &rarr;</a>
-    <a class="btn btn-outline" href="tel:+263773125505">Call 0773 125 505</a>
+    <a class="btn btn-primary btn-lg" href="contact.html">Get a quote &rarr;</a>
+    <a class="btn btn-outline btn-lg" href="tel:+263773125505">Call 0773 125 505</a>
+    <p class="mobile-nav-hours">Mon&ndash;Fri 8am&ndash;5pm &middot; Sat 8am&ndash;1pm</p>
   </div>
 </nav>
 <main id="main-content">
@@ -92,47 +99,45 @@
   <!-- Mission -->
   <section class="section" aria-labelledby="mission-h2">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start">
-        <div class="reveal">
+      <div class="split">
+        <div class="split-body reveal">
           <span class="text-eyebrow">Our mission</span>
           <h2 class="text-h2" id="mission-h2">Global standards.<br>Local expertise.</h2>
-          <p class="text-body" style="margin-bottom:16px">Lysam Turbo and Diesel brings global engineering standards to the areas of turbocharger repairs, diesel fuel injection systems, cylinder head reconditioning, just-in-time parts supplies, vehicle servicing and hydraulic cylinder reconditioning.</p>
-          <p class="text-body" style="margin-bottom:16px">The key objective is to offer value to all our customers and stakeholders — not just through technical excellence but through reliability, honest communication and genuine care for your equipment downtime.</p>
+          <p class="text-body">Lysam Turbo and Diesel brings global engineering standards to the areas of turbocharger repairs, diesel fuel injection systems, cylinder head reconditioning, just-in-time parts supplies, vehicle servicing and hydraulic cylinder reconditioning.</p>
+          <p class="text-body">The key objective is to offer value to all our customers and stakeholders — not just through technical excellence but through reliability, honest communication and genuine care for your equipment downtime.</p>
           <p class="text-body">We are a one-stop-shop in engine reconditioning, carrying most processes internally and ensuring high levels of control for the final product — and full workmanship warranty.</p>
         </div>
         <div class="reveal reveal-d1">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-            <div style="background:var(--gray-50);border:1px solid var(--border);border-radius:var(--r-md);padding:24px;text-align:center">
-              <div style="font-family:var(--font-display);font-size:48px;font-weight:800;color:var(--lime);line-height:1">20+</div>
-              <div style="font-size:13px;color:var(--gray-500);margin-top:6px">Years combined expertise</div>
-            </div>
-            <div style="background:var(--gray-50);border:1px solid var(--border);border-radius:var(--r-md);padding:24px;text-align:center">
-              <div style="font-family:var(--font-display);font-size:48px;font-weight:800;color:var(--lime);line-height:1">7</div>
-              <div style="font-size:13px;color:var(--gray-500);margin-top:6px">Turbo brands serviced</div>
-            </div>
-            <div style="background:var(--black);border-radius:var(--r-md);padding:24px;text-align:center">
-              <div style="font-family:var(--font-display);font-size:48px;font-weight:800;color:var(--lime);line-height:1">3</div>
-              <div style="font-size:13px;color:var(--gray-300);margin-top:6px">Day parts sourcing</div>
-            </div>
-            <div style="background:var(--gray-50);border:1px solid var(--border);border-radius:var(--r-md);padding:24px;text-align:center">
-              <div style="font-family:var(--font-display);font-size:38px;font-weight:800;color:var(--lime);line-height:1">OEM</div>
-              <div style="font-size:13px;color:var(--gray-500);margin-top:6px">Grade quality standard</div>
-            </div>
+          <div class="stat-grid">
+            <div class="stat-tile"><div class="stat-tile-val">20+</div><div class="stat-tile-lbl">Years combined expertise</div></div>
+            <div class="stat-tile"><div class="stat-tile-val">7</div><div class="stat-tile-lbl">Turbo brands serviced</div></div>
+            <div class="stat-tile stat-tile--lime"><div class="stat-tile-val">3</div><div class="stat-tile-lbl">Day parts sourcing</div></div>
+            <div class="stat-tile"><div class="stat-tile-val">OEM</div><div class="stat-tile-lbl">Grade quality standard</div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Workshop image -->
-  <div style="background:var(--black);padding:0">
-    <div class="container" style="padding-top:0;padding-bottom:0">
-      <img src="images/lysam-workshop-harare.jpg"
-           alt="Lysam Turbo and Diesel workshop interior — Graniteside, Harare, Zimbabwe"
-           width="1140" height="480" loading="lazy"
-           style="width:100%;height:480px;object-fit:cover;display:block;border-radius:0">
+  <!-- On the workshop floor -->
+  <section class="section-sm" aria-label="Workshop gallery">
+    <div class="container">
+      <div class="mosaic reveal">
+        <figure class="mosaic-item mosaic-item--lg">
+          <img src="images/hero-workshop.jpg" alt="Technician rebuilding a turbocharger at the Lysam workshop, Graniteside, Harare" width="1920" height="900" loading="lazy" decoding="async">
+          <figcaption>Turbocharger rebuild</figcaption>
+        </figure>
+        <figure class="mosaic-item">
+          <img src="images/auto-electrics-harare.jpg" alt="Auto electrical testing with a digital multimeter" width="736" height="1318" loading="lazy" decoding="async">
+          <figcaption>Auto electrics</figcaption>
+        </figure>
+        <figure class="mosaic-item">
+          <img src="images/hydraulic-cylinder-harare.jpg" alt="Hydraulic cylinder reconditioning on the workshop floor" width="540" height="960" loading="lazy" decoding="async">
+          <figcaption>Hydraulics</figcaption>
+        </figure>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- Team -->
   <section class="section section-alt" id="team" aria-labelledby="team-h2">
@@ -142,46 +147,40 @@
         <h2 class="text-h2" id="team-h2">Qualified engineers,<br>qualified to care.</h2>
         <p class="text-lead">Every repair at Lysam is performed or overseen by founders who hold formal qualifications in mechanical and diesel engineering.</p>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+      <div class="team-grid">
         <article class="credentials-card reveal" aria-label="Lyton Vurayai profile">
-          <div style="display:flex;gap:16px;align-items:center;margin-bottom:20px">
-            <div class="person-avatar" style="width:56px;height:56px;font-size:20px" aria-hidden="true">LV</div>
+          <div class="founder-head">
+            <div class="person-avatar" aria-hidden="true">LV</div>
             <div>
               <h3 class="founder-name">Lyton Vurayai</h3>
-              <p style="font-size:13px;color:var(--lime-dark);font-weight:500">Co-founder &amp; Director</p>
+              <p class="founder-role">Co-founder &amp; Director</p>
             </div>
           </div>
-          <p class="text-body" style="margin-bottom:16px">With a background spanning mechanical engineering, transport logistics and automotive precision machining, Lyton brings hands-on precision and business rigour to every project.</p>
+          <p class="text-body">With a background spanning mechanical engineering, transport logistics and automotive precision machining, Lyton brings hands-on precision and business rigour to every project.</p>
           <div class="brands-tags">
             <span class="brand-tag">Diploma in Mechanical Engineering</span>
             <span class="brand-tag">Advanced Diploma — Transport &amp; Logistics</span>
             <span class="brand-tag">Class One Journeyman — Automotive Precision Machining</span>
           </div>
-          <p style="font-size:13px;color:var(--gray-500);margin-top:16px">
-            <a href="tel:+263773125505" style="color:var(--lime-dark);text-decoration:none;font-weight:500">0773 125 505</a> &middot;
-            <a href="tel:+263716916403" style="color:var(--gray-500);text-decoration:none">0716 916 403</a>
-          </p>
+          <p class="founder-phones"><a href="tel:+263773125505">0773 125 505</a><a href="tel:+263716916403">0716 916 403</a></p>
         </article>
 
         <article class="credentials-card reveal reveal-d1" aria-label="Samson Phili profile">
-          <div style="display:flex;gap:16px;align-items:center;margin-bottom:20px">
-            <div class="person-avatar" style="width:56px;height:56px;font-size:20px" aria-hidden="true">SP</div>
+          <div class="founder-head">
+            <div class="person-avatar" aria-hidden="true">SP</div>
             <div>
               <h3 class="founder-name">Samson Phili</h3>
-              <p style="font-size:13px;color:var(--lime-dark);font-weight:500">Co-founder &amp; Director</p>
+              <p class="founder-role">Co-founder &amp; Director</p>
             </div>
           </div>
-          <p class="text-body" style="margin-bottom:16px">A Class One Journeyman Diesel Plant Fitter from Harare Polytechnic, Samson specialises in diesel systems, precision machining and transport logistics — with CILT-accredited training.</p>
+          <p class="text-body">A Class One Journeyman Diesel Plant Fitter from Harare Polytechnic, Samson specialises in diesel systems, precision machining and transport logistics — with CILT-accredited training.</p>
           <div class="brands-tags">
             <span class="brand-tag">Class One Journeyman — Diesel Plant Fitter</span>
             <span class="brand-tag">Mechanical Engineering — Harare Polytechnic</span>
             <span class="brand-tag">Journeyman — Automotive Precision Machining</span>
             <span class="brand-tag">Advanced Diploma — Transport &amp; Logistics (CILT)</span>
           </div>
-          <p style="font-size:13px;color:var(--gray-500);margin-top:16px">
-            <a href="tel:+263776303728" style="color:var(--lime-dark);text-decoration:none;font-weight:500">0776 303 728</a> &middot;
-            <a href="tel:+263712125497" style="color:var(--gray-500);text-decoration:none">0712 125 497</a>
-          </p>
+          <p class="founder-phones"><a href="tel:+263776303728">0776 303 728</a><a href="tel:+263712125497">0712 125 497</a></p>
         </article>
       </div>
     </div>
@@ -221,11 +220,11 @@
   <!-- Values -->
   <section class="section section-alt" aria-labelledby="values-h2">
     <div class="container">
-      <div class="section-header section-header--centered reveal" style="text-align:center">
+      <div class="section-header section-header--centered reveal">
         <span class="text-eyebrow">Our ethos</span>
         <h2 class="text-h2" id="values-h2">The four pillars we build on.</h2>
       </div>
-      <div class="services-grid">
+      <div class="services-grid services-grid--4">
         <div class="service-card reveal reveal-d1">
           <div class="service-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
           <h3 class="service-name">Reliability</h3>
@@ -270,27 +269,30 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="images/logo.png" alt="Lysam Turbo and Diesel" class="footer-brand-logo" width="140" height="47" loading="lazy">
-        <p class="footer-brand-desc">A wholly owned Zimbabwean company founded on Reliability, Responsiveness, Empathy and Communication. Global engineering standards in Harare since 2021.</p>
+        <img src="images/logo.png" alt="Lysam Turbo and Diesel" class="footer-brand-logo"
+             width="140" height="47" loading="lazy">
+        <p class="footer-brand-desc">A wholly owned Zimbabwean company founded on Reliability,
+        Responsiveness, Empathy and Communication. Bringing global engineering standards to
+        Harare and Zimbabwe since 2021.</p>
         <p class="footer-reg">Reg. No. 23089/2021 &middot; Harare, Zimbabwe</p>
       </div>
       <div>
         <p class="footer-col-heading">Services</p>
         <ul class="footer-nav-list" role="list">
-          <li><a href="services.html">Turbochargers</a></li>
-          <li><a href="services.html">Diesel Pumps &amp; Injectors</a></li>
-          <li><a href="services.html">Engine Reconditioning</a></li>
-          <li><a href="services.html">Auto Electrics</a></li>
-          <li><a href="services.html">Hydraulic Cylinders</a></li>
-          <li><a href="services.html">Mining &amp; Agri Spares</a></li>
+          <li><a href="services.html#turbochargers">Turbochargers</a></li>
+          <li><a href="services.html#diesel-pumps">Diesel Pumps &amp; Injectors</a></li>
+          <li><a href="services.html#engine-recon">Engine Reconditioning</a></li>
+          <li><a href="services.html#auto-electrics">Auto Electrics</a></li>
+          <li><a href="services.html#hydraulics">Hydraulic Cylinders</a></li>
+          <li><a href="services.html#mining-spares">Mining &amp; Agri Spares</a></li>
         </ul>
       </div>
       <div>
         <p class="footer-col-heading">Company</p>
         <ul class="footer-nav-list" role="list">
           <li><a href="about.html">About us</a></li>
-          <li><a href="about.html">Our team</a></li>
-          <li><a href="about.html">Client references</a></li>
+          <li><a href="about.html#team">Our team</a></li>
+          <li><a href="about.html#references">Client references</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -312,12 +314,18 @@
     </div>
   </div>
 </footer>
-<a class="wa-float" href="https://wa.me/263773125505?text=Hi%2C%20I%27d%20like%20to%20request%20a%20quote%20from%20Lysam%20Turbo%20%26%20Diesel."
-   target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+<a class="wa-float"
+   href="https://wa.me/263773125505?text=Hi%2C%20I%27d%20like%20to%20request%20a%20quote%20from%20Lysam%20Turbo%20%26%20Diesel."
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp">
   <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.116 1.528 5.845L.057 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.028-1.383l-.36-.214-3.742.981.997-3.648-.235-.374A9.77 9.77 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.116 1.528 5.845L.057 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.028-1.383l-.36-.214-3.742.981.997-3.648-.235-.374A9.77 9.77 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/>
   </svg>
 </a>
+<div class="action-bar" role="region" aria-label="Quick contact">
+  <a class="action-bar-btn" href="tel:+263773125505"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call</a>
+  <a class="action-bar-btn action-bar-btn--wa" href="https://wa.me/263773125505?text=Hi%2C%20I%27d%20like%20to%20request%20a%20quote%20from%20Lysam%20Turbo%20%26%20Diesel." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.116 1.528 5.845L.057 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.028-1.383l-.36-.214-3.742.981.997-3.648-.235-.374A9.77 9.77 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg> WhatsApp</a>
+  <a class="action-bar-btn action-bar-btn--primary" href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg> Quote</a>
+</div>
 <script src="js/main.js" defer></script>
 </body></html>

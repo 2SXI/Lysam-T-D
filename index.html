@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="index, follow">
 <title>Turbocharger Repairs Harare | Lysam Turbo & Diesel Zimbabwe</title>
 <meta name="description" content="OEM-grade turbocharger rebuilds, diesel pump calibration, engine reconditioning & hydraulic cylinders in Harare, Zimbabwe. Call 0773 125 505.">
@@ -31,9 +31,9 @@
 <link rel="icon"             type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon"             type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180"  href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="css/main.css">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -95,12 +95,10 @@
       <a class="nav-phone" href="tel:+263773125505">0773 125 505</a>
       <a class="btn btn-primary" href="contact.html">Get a quote</a>
     </div>
-    <button class="nav-toggle" id="nav-toggle"
+    <button class="nav-toggle" id="nav-toggle" type="button"
             aria-controls="mobile-nav" aria-expanded="false"
             aria-label="Open navigation menu">
-      <div class="hamburger-bars" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
+      <span class="hamburger-bars" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
   </div>
 </header>
@@ -113,8 +111,9 @@
     <a href="contact.html">Contact</a>
   </div>
   <div class="mobile-nav-cta">
-    <a class="btn btn-primary" href="contact.html" style="justify-content:center">Get a quote &rarr;</a>
-    <a class="btn btn-outline" href="tel:+263773125505">Call 0773 125 505</a>
+    <a class="btn btn-primary btn-lg" href="contact.html">Get a quote &rarr;</a>
+    <a class="btn btn-outline btn-lg" href="tel:+263773125505">Call 0773 125 505</a>
+    <p class="mobile-nav-hours">Mon&ndash;Fri 8am&ndash;5pm &middot; Sat 8am&ndash;1pm</p>
   </div>
 </nav>
 
@@ -122,63 +121,52 @@
 
   <!-- ═══ HERO ═══ -->
   <section class="hero" aria-label="Hero">
-    <div class="container">
-      <div class="hero-body">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="hero-badge-dot" aria-hidden="true"></span>
-            Harare, Zimbabwe &mdash; Est. 2021
-          </div>
-          <h1 class="text-h1 hero-h1">
-            Precision<br>
-            <span class="accent-underline">turbo</span><br>
-            &amp; diesel<br>
-            engineering.
-          </h1>
-          <p class="hero-sub">
-            OEM-grade turbocharger rebuilds, diesel pump calibration,
-            engine reconditioning and hydraulic cylinder repairs &mdash;
-            done right the first time, every time.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" href="contact.html">Request a quote &rarr;</a>
-            <a class="btn btn-outline btn-lg" href="services.html">View services</a>
-          </div>
-          <div class="hero-meta" aria-label="Key facts">
-            <span class="hero-meta-item">20+ years expertise</span>
-            <span class="hero-meta-sep" aria-hidden="true"></span>
-            <span class="hero-meta-item">7 turbo brands</span>
-            <span class="hero-meta-sep" aria-hidden="true"></span>
-            <span class="hero-meta-item">Full warranty</span>
-          </div>
-        </div>
+    <img class="hero-bg" src="images/hero-workshop.jpg"
+         alt="Lysam Turbo and Diesel workshop — turbocharger and diesel engine engineering in Harare, Zimbabwe"
+         width="1920" height="900" fetchpriority="high">
+    <div class="hero-shade" aria-hidden="true"></div>
 
-        <div class="hero-visual" aria-hidden="true">
-                    <div class="hero-img-frame">
-            <img
-              src="images/hero-workshop.jpg"
-              alt="Lysam Turbo and Diesel workshop — turbocharger and diesel engine engineering in Harare, Zimbabwe"
-              width="800" height="600"
-              style="width:100%;height:100%;object-fit:cover">
-          </div>
-          <div class="hero-stats" role="region" aria-label="Quick stats">
-            <div class="hero-stat">
-              <div class="hero-stat-val" data-count="20" data-suffix="+">20+</div>
-              <div class="hero-stat-lbl">Years expertise</div>
-            </div>
-            <div class="hero-stat-div" aria-hidden="true"></div>
-            <div class="hero-stat">
-              <div class="hero-stat-val" data-count="7">7</div>
-              <div class="hero-stat-lbl">Turbo brands</div>
-            </div>
-            <div class="hero-stat-div" aria-hidden="true"></div>
-            <div class="hero-stat">
-              <div class="hero-stat-val" data-count="3">3</div>
-              <div class="hero-stat-lbl">Day sourcing</div>
-            </div>
-          </div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          Harare, Zimbabwe &mdash; Est. 2021
         </div>
+        <h1 class="text-h1 hero-h1">
+          Precision <span class="accent-underline">turbo</span><br>
+          &amp; diesel<br>
+          engineering.
+        </h1>
+        <p class="hero-sub">
+          OEM-grade turbocharger rebuilds, diesel pump calibration,
+          engine reconditioning and hydraulic cylinder repairs &mdash;
+          done right the first time, every time.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="contact.html">Request a quote &rarr;</a>
+          <a class="btn btn-outline btn-lg" href="services.html">View services</a>
+        </div>
+      </div>
+    </div>
 
+    <div class="container hero-stats-wrap">
+      <div class="hero-stats" role="region" aria-label="Key facts">
+        <div class="hero-stat">
+          <div class="hero-stat-val" data-count="20" data-suffix="+">20+</div>
+          <div class="hero-stat-lbl">Years expertise</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-val" data-count="7">7</div>
+          <div class="hero-stat-lbl">Turbo brands serviced</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-val" data-count="3">3</div>
+          <div class="hero-stat-lbl">Day parts sourcing</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-val">Full</div>
+          <div class="hero-stat-lbl">Workmanship warranty</div>
+        </div>
       </div>
     </div>
   </section>
@@ -186,7 +174,8 @@
   <!-- ═══ CLIENTS MARQUEE ═══ -->
   <div class="marquee-strip" aria-label="Trusted by these companies" role="region">
     <span class="marquee-label">Trusted by</span>
-    <div class="marquee-track" aria-hidden="true">
+    <div class="marquee-viewport">
+      <div class="marquee-track" aria-hidden="true">
       <span class="marquee-item">Pride of Africa</span><span class="marquee-dot"></span>
       <span class="marquee-item">Surface Wilmar</span><span class="marquee-dot"></span>
       <span class="marquee-item">Chimanimani Logistics</span><span class="marquee-dot"></span>
@@ -218,6 +207,7 @@
       <span class="marquee-item">Prestige Auto Care</span><span class="marquee-dot"></span>
       <span class="marquee-item">Techeerz Furnitures</span><span class="marquee-dot"></span>
       <span class="marquee-item">Nyaradzo Procurement Solutions</span><span class="marquee-dot"></span>
+      </div>
     </div>
   </div>
 
@@ -233,7 +223,7 @@
       </div>
 
       <div class="services-grid">
-        <a class="service-card reveal reveal-d1" href="services.html" aria-label="Turbochargers service page">
+        <a class="service-card reveal reveal-d1" href="services.html#turbochargers" aria-label="Turbochargers service page">
           <div class="service-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 0 1 7.39 16.74"/><path d="M9.6 21.8A10 10 0 0 1 2 12"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/><circle cx="12" cy="12" r="7" stroke-dasharray="2 3"/></svg></div>
           <h3 class="service-name">Turbochargers</h3>
           <p class="service-desc">Superior repairs and rebuilds using computerised balancing machines. We source new turbos, core assemblies and repair kits globally.</p>
@@ -243,8 +233,9 @@
             <span class="service-tag">IHI</span>
             <span class="service-tag">Borg Warner</span>
           </div>
+          <span class="service-more">Learn more</span>
         </a>
-        <a class="service-card reveal reveal-d2" href="services.html" aria-label="Diesel pumps and injectors service page">
+        <a class="service-card reveal reveal-d2" href="services.html#diesel-pumps" aria-label="Diesel pumps and injectors service page">
           <div class="service-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
           <h3 class="service-name">Diesel Pumps &amp; Injectors</h3>
           <p class="service-desc">Full mechanical and electronic diesel injection systems. Precision test benches guarantee high-quality common rail, rotary and inline repairs.</p>
@@ -253,8 +244,9 @@
             <span class="service-tag">Rotary pumps</span>
             <span class="service-tag">Bosch</span>
           </div>
+          <span class="service-more">Learn more</span>
         </a>
-        <a class="service-card reveal reveal-d3" href="services.html" aria-label="Engine reconditioning service page">
+        <a class="service-card reveal reveal-d3" href="services.html#engine-recon" aria-label="Engine reconditioning service page">
           <div class="service-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
           <h3 class="service-name">Engine Reconditioning</h3>
           <p class="service-desc">Complete engine rebuilds to OEM specifications. Cylinder head reconditioning, skimming, valve refacing and pressure testing with digital measurement.</p>
@@ -263,8 +255,9 @@
             <span class="service-tag">Perkins</span>
             <span class="service-tag">Deutz</span>
           </div>
+          <span class="service-more">Learn more</span>
         </a>
-        <a class="service-card reveal reveal-d1" href="services.html" aria-label="Auto electrics service page">
+        <a class="service-card reveal reveal-d1" href="services.html#auto-electrics" aria-label="Auto electrics service page">
           <div class="service-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
           <h3 class="service-name">Auto Electrics</h3>
           <p class="service-desc">Starter motors, alternators and full auto electrical systems. Products from Bosch, Hella, VDO and other top international brands.</p>
@@ -273,8 +266,9 @@
             <span class="service-tag">Alternators</span>
             <span class="service-tag">Heavy duty</span>
           </div>
+          <span class="service-more">Learn more</span>
         </a>
-        <a class="service-card reveal reveal-d2" href="services.html" aria-label="Hydraulic cylinders service page">
+        <a class="service-card reveal reveal-d2" href="services.html#hydraulics" aria-label="Hydraulic cylinders service page">
           <div class="service-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div>
           <h3 class="service-name">Hydraulic Cylinders</h3>
           <p class="service-desc">Full hydraulic cylinder reconditioning with dimensional reclamation equipment. Every unit pressure-tested on the bench before delivery.</p>
@@ -283,8 +277,9 @@
             <span class="service-tag">Seals</span>
             <span class="service-tag">Testing</span>
           </div>
+          <span class="service-more">Learn more</span>
         </a>
-        <a class="service-card reveal reveal-d3" href="services.html" aria-label="Mining and agri spares service page">
+        <a class="service-card reveal reveal-d3" href="services.html#mining-spares" aria-label="Mining and agri spares service page">
           <div class="service-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
           <h3 class="service-name">Mining &amp; Agri Spares</h3>
           <p class="service-desc">Just-in-time parts sourcing for mining equipment, agricultural machinery and heavy commercial transport. Quality parts within 3 days.</p>
@@ -293,13 +288,14 @@
             <span class="service-tag">Agriculture</span>
             <span class="service-tag">3-day delivery</span>
           </div>
+          <span class="service-more">Learn more</span>
         </a>
       </div>
     </div>
   </section>
 
   <!-- ═══ WHY LYSAM ═══ -->
-  <section class="section section-alt" id="why-lysam" aria-labelledby="trust-heading">
+  <section class="section section-dark" id="why-lysam" aria-labelledby="trust-heading">
     <div class="container">
       <div class="section-header reveal">
         <span class="text-eyebrow">Why Lysam</span>
@@ -373,7 +369,7 @@
       </div>
       <div class="process-grid">
         <div class="process-step reveal reveal-d1">
-          <div class="step-num is-active default-active" aria-hidden="true">1</div>
+          <div class="step-num" aria-hidden="true">1</div>
           <h3 class="step-title">Diagnose</h3>
           <p class="step-desc">State-of-the-art test benches identify the root cause accurately before any work begins.</p>
         </div>
@@ -522,20 +518,20 @@
       <div>
         <p class="footer-col-heading">Services</p>
         <ul class="footer-nav-list" role="list">
-          <li><a href="services.html">Turbochargers</a></li>
-          <li><a href="services.html">Diesel Pumps &amp; Injectors</a></li>
-          <li><a href="services.html">Engine Reconditioning</a></li>
-          <li><a href="services.html">Auto Electrics</a></li>
-          <li><a href="services.html">Hydraulic Cylinders</a></li>
-          <li><a href="services.html">Mining &amp; Agri Spares</a></li>
+          <li><a href="services.html#turbochargers">Turbochargers</a></li>
+          <li><a href="services.html#diesel-pumps">Diesel Pumps &amp; Injectors</a></li>
+          <li><a href="services.html#engine-recon">Engine Reconditioning</a></li>
+          <li><a href="services.html#auto-electrics">Auto Electrics</a></li>
+          <li><a href="services.html#hydraulics">Hydraulic Cylinders</a></li>
+          <li><a href="services.html#mining-spares">Mining &amp; Agri Spares</a></li>
         </ul>
       </div>
       <div>
         <p class="footer-col-heading">Company</p>
         <ul class="footer-nav-list" role="list">
           <li><a href="about.html">About us</a></li>
-          <li><a href="about.html">Our team</a></li>
-          <li><a href="about.html">Client references</a></li>
+          <li><a href="about.html#team">Our team</a></li>
+          <li><a href="about.html#references">Client references</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -563,10 +559,14 @@
    target="_blank" rel="noopener noreferrer"
    aria-label="Chat with us on WhatsApp">
   <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.116 1.528 5.845L.057 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.028-1.383l-.36-.214-3.742.981.997-3.648-.235-.374A9.77 9.77 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.116 1.528 5.845L.057 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.028-1.383l-.36-.214-3.742.981.997-3.648-.235-.374A9.77 9.77 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/>
   </svg>
 </a>
+<div class="action-bar" role="region" aria-label="Quick contact">
+  <a class="action-bar-btn" href="tel:+263773125505"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call</a>
+  <a class="action-bar-btn action-bar-btn--wa" href="https://wa.me/263773125505?text=Hi%2C%20I%27d%20like%20to%20request%20a%20quote%20from%20Lysam%20Turbo%20%26%20Diesel." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.116 1.528 5.845L.057 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.028-1.383l-.36-.214-3.742.981.997-3.648-.235-.374A9.77 9.77 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg> WhatsApp</a>
+  <a class="action-bar-btn action-bar-btn--primary" href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg> Quote</a>
+</div>
 <script src="js/main.js" defer></script>
 </body>
 </html>

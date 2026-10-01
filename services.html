@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="index, follow">
 <title>Turbocharger & Diesel Services Harare | Lysam Turbo & Diesel</title>
 <meta name="description" content="Expert turbocharger repairs, diesel pump calibration, engine reconditioning, auto electrics & hydraulic cylinders in Harare, Zimbabwe. OEM-grade quality.">
@@ -31,9 +31,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="css/main.css">
 <script type="application/ld+json">{
   "@context":"https://schema.org",
@@ -73,9 +73,10 @@
       <a class="nav-phone" href="tel:+263773125505">0773 125 505</a>
       <a class="btn btn-primary" href="contact.html">Get a quote</a>
     </div>
-    <button class="nav-toggle" id="nav-toggle" aria-controls="mobile-nav"
-            aria-expanded="false" aria-label="Open navigation menu">
-      <div class="hamburger-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+    <button class="nav-toggle" id="nav-toggle" type="button"
+            aria-controls="mobile-nav" aria-expanded="false"
+            aria-label="Open navigation menu">
+      <span class="hamburger-bars" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
   </div>
 </header>
@@ -87,13 +88,13 @@
     <a href="contact.html">Contact</a>
   </div>
   <div class="mobile-nav-cta">
-    <a class="btn btn-primary" href="contact.html" style="justify-content:center">Get a quote &rarr;</a>
-    <a class="btn btn-outline" href="tel:+263773125505">Call 0773 125 505</a>
+    <a class="btn btn-primary btn-lg" href="contact.html">Get a quote &rarr;</a>
+    <a class="btn btn-outline btn-lg" href="tel:+263773125505">Call 0773 125 505</a>
+    <p class="mobile-nav-hours">Mon&ndash;Fri 8am&ndash;5pm &middot; Sat 8am&ndash;1pm</p>
   </div>
 </nav>
 <main id="main-content">
 
-  <!-- Page Hero -->
   <section class="page-hero" aria-labelledby="page-h1">
     <div class="container">
       <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -107,16 +108,29 @@
     </div>
   </section>
 
-  <!-- ═══ TURBOCHARGERS ═══ -->
+  <nav class="jump-nav" aria-label="Jump to a service" id="jump-nav">
+    <div class="container">
+      <ul class="jump-list">
+        <li><a href="#turbochargers">Turbochargers</a></li>
+        <li><a href="#diesel-pumps">Diesel pumps</a></li>
+        <li><a href="#engine-recon">Engine recon</a></li>
+        <li><a href="#auto-electrics">Auto electrics</a></li>
+        <li><a href="#hydraulics">Hydraulics</a></li>
+        <li><a href="#mining-spares">Mining &amp; spares</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <section class="section" id="turbochargers" aria-labelledby="turbo-h2">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
-        <div class="reveal">
+      <div class="split split--media-right">
+        <div class="split-media reveal"><figure class="media media--contain"><img src="images/turbocharger-rebuild-harare.jpg" alt="Turbocharger repair and rebuild service in Harare Zimbabwe — Lysam Turbo and Diesel" width="666" height="610" loading="lazy" decoding="async"></figure></div>
+        <div class="split-body reveal reveal-d1">
           <span class="text-eyebrow">Service 01</span>
           <h2 class="text-h2" id="turbo-h2">Turbocharger repair &amp; rebuild, Harare</h2>
-          <p class="text-body" style="margin-bottom:16px">Our turbocharger section offers superior repairs and rebuilds through computerised balancing machines and highly experienced technicians. We service all major brands for passenger vehicles, earthmoving engines, industrial engines, generators, agricultural machinery and mining equipment.</p>
-          <p class="text-body" style="margin-bottom:24px">Through global distributorship arrangements, we source new turbochargers, core assemblies and repair kits competitively — ensuring optimal value.</p>
-          <div class="brands-tags" style="margin-bottom:28px">
+          <p class="text-body">Our turbocharger section offers superior repairs and rebuilds through computerised balancing machines and highly experienced technicians. We service all major brands for passenger vehicles, earthmoving engines, industrial engines, generators, agricultural machinery and mining equipment.</p>
+          <p class="text-body">Through global distributorship arrangements, we source new turbochargers, core assemblies and repair kits competitively — ensuring optimal value.</p>
+          <div class="brands-tags">
             <span class="brand-tag">Garrett</span><span class="brand-tag">Holset</span>
             <span class="brand-tag">Toyota</span><span class="brand-tag">Mitsubishi</span>
             <span class="brand-tag">Schwitzer</span><span class="brand-tag">IHI</span>
@@ -124,98 +138,78 @@
           </div>
           <a class="btn btn-primary" href="contact.html">Request turbo quote &rarr;</a>
         </div>
-        <div class="reveal reveal-d1" aria-hidden="true">
-          <img src="images/turbocharger-repair-harare.jpg" alt="Turbocharger repair and rebuild service in Harare Zimbabwe — Lysam Turbo and Diesel" width="800" height="600" loading="lazy" style="width:100%;border-radius:var(--r-lg);display:block">
-        </div>
       </div>
     </div>
   </section>
-
-  <!-- ═══ DIESEL PUMPS ═══ -->
   <section class="section section-alt" id="diesel-pumps" aria-labelledby="diesel-h2">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
-        <div class="reveal" aria-hidden="true">
-          <img src="images/diesel-pump-calibration-harare.jpg" alt="Diesel pump and injector calibration service Harare Zimbabwe" width="800" height="600" loading="lazy" style="width:100%;border-radius:var(--r-lg);display:block">
-        </div>
-        <div class="reveal reveal-d1">
+      <div class="split">
+        <div class="split-media reveal"><figure class="media media--contain"><img src="images/diesel-pump-calibration-harare.jpg" alt="Diesel pump and injector calibration service Harare Zimbabwe" width="736" height="736" loading="lazy" decoding="async"></figure></div>
+        <div class="split-body reveal reveal-d1">
           <span class="text-eyebrow">Service 02</span>
           <h2 class="text-h2" id="diesel-h2">Diesel pumps &amp; injectors</h2>
-          <p class="text-body" style="margin-bottom:16px">Complete parts and service for mechanical and electronic diesel injection systems. Our state-of-the-art test benches — made from high-precision equipment — together with our team of qualified technicians guarantee high quality when repairing common rail, injection pumps and diesel injectors.</p>
-          <p class="text-body" style="margin-bottom:16px">Pump types serviced: Cummins celect and non-celect, Rotary, DPA, CAV rotary and inline, VE, VA, Bosch inline and VE, Zexel and Denso pumps and injectors.</p>
-          <p class="text-body" style="margin-bottom:24px">Parts stocked: pump heads, rotors, elements, seal kits, governors, cam discs, springs, barrels, plungers, nozzles and more.</p>
+          <p class="text-body">Complete parts and service for mechanical and electronic diesel injection systems. Our state-of-the-art test benches — made from high-precision equipment — together with our team of qualified technicians guarantee high quality when repairing common rail, injection pumps and diesel injectors.</p>
+          <div class="spec"><span class="spec-label">Pump types serviced</span><p>Cummins celect and non-celect, Rotary, DPA, CAV rotary and inline, VE, VA, Bosch inline and VE, Zexel and Denso pumps and injectors.</p></div>
+          <div class="spec"><span class="spec-label">Parts stocked</span><p>Pump heads, rotors, elements, seal kits, governors, cam discs, springs, barrels, plungers, nozzles and more.</p></div>
           <a class="btn btn-primary" href="contact.html">Request diesel quote &rarr;</a>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- ═══ ENGINE RECON ═══ -->
   <section class="section" id="engine-recon" aria-labelledby="engine-h2">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
-        <div class="reveal">
+      <div class="split split--media-right">
+        <div class="split-media reveal"><figure class="media media--contain"><img src="images/engine-reconditioning-harare.jpg" alt="Engine and cylinder head reconditioning Harare Zimbabwe" width="735" height="490" loading="lazy" decoding="async"></figure></div>
+        <div class="split-body reveal reveal-d1">
           <span class="text-eyebrow">Service 03</span>
           <h2 class="text-h2" id="engine-h2">Engine &amp; cylinder head reconditioning</h2>
-          <p class="text-body" style="margin-bottom:16px">Complete engine reconditioning and sub-assemblies are done to OEM specifications. Our personnel have over 20 years of hands-on experience in engine rebuilding.</p>
-          <p class="text-body" style="margin-bottom:16px">Cylinder head reconditioning uses modern state-of-the-art skimming machines, valve refacers, pressure testing and valve seat cutting machines. Digital measurement systems ensure accurate, highly precise workmanship.</p>
-          <p class="text-body" style="margin-bottom:24px">Extensive experience reconditioning: Deutz, Detroit, Perkins, ADE, Cummins and all passenger engines.</p>
-          <div class="brands-tags" style="margin-bottom:28px">
+          <p class="text-body">Complete engine reconditioning and sub-assemblies are done to OEM specifications. Our personnel have over 20 years of hands-on experience in engine rebuilding.</p>
+          <p class="text-body">Cylinder head reconditioning uses modern state-of-the-art skimming machines, valve refacers, pressure testing and valve seat cutting machines. Digital measurement systems ensure accurate, highly precise workmanship.</p>
+          <div class="spec"><span class="spec-label">Extensive experience reconditioning</span><p>Deutz, Detroit, Perkins, ADE, Cummins and all passenger engines.</p></div>
+          <div class="brands-tags">
             <span class="brand-tag">Deutz</span><span class="brand-tag">Cummins</span>
             <span class="brand-tag">Perkins</span><span class="brand-tag">ADE</span>
             <span class="brand-tag">Detroit</span>
           </div>
           <a class="btn btn-primary" href="contact.html">Request engine quote &rarr;</a>
         </div>
-        <div class="reveal reveal-d1" aria-hidden="true">
-          <img src="images/engine-reconditioning-harare.jpg" alt="Engine and cylinder head reconditioning Harare Zimbabwe" width="800" height="600" loading="lazy" style="width:100%;border-radius:var(--r-lg);display:block">
-        </div>
       </div>
     </div>
   </section>
-
-  <!-- ═══ AUTO ELECTRICS ═══ -->
   <section class="section section-alt" id="auto-electrics" aria-labelledby="elec-h2">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
-        <div class="reveal" aria-hidden="true">
-          <img src="images/auto-electrics-harare.jpg" alt="Auto electrics starters alternators repair Harare Zimbabwe" width="800" height="600" loading="lazy" style="width:100%;border-radius:var(--r-lg);display:block">
-        </div>
-        <div class="reveal reveal-d1">
+      <div class="split">
+        <div class="split-media reveal"><figure class="media "><img src="images/auto-electrics-harare.jpg" alt="Auto electrics starters alternators repair Harare Zimbabwe" width="736" height="1318" loading="lazy" decoding="async"></figure></div>
+        <div class="split-body reveal reveal-d1">
           <span class="text-eyebrow">Service 04</span>
           <h2 class="text-h2" id="elec-h2">Auto electrics Harare</h2>
-          <p class="text-body" style="margin-bottom:16px">Lysam is a supplier of auto electrical products sourced from top international brands including Bosch, Hella, VDO, Delco Remy, Transpozen, Unipoint, Ring, Elpa and Control Instrument.</p>
+          <p class="text-body">Lysam is a supplier of auto electrical products sourced from top international brands including Bosch, Hella, VDO, Delco Remy, Transpozen, Unipoint, Ring, Elpa and Control Instrument.</p>
           <ul class="service-detail-list">
             <li><strong>Starter motors</strong> — new starters, solenoids, armatures and repair kits</li>
             <li><strong>Alternators</strong> — new alternators, regulators, rectifiers and stators</li>
             <li><strong>Accessories</strong> — relay units, flashers, LED lamps, spot lights, beacon lights, oil pressure and temperature gauges</li>
           </ul>
-          <p class="text-body" style="margin-bottom:24px">All repairs and services done by qualified auto electrical staff and tested by state-of-the-art test benches. Products cover light motor vehicles, heavy duty vehicles and earth moving equipment.</p>
+          <p class="text-body">All repairs and services done by qualified auto electrical staff and tested by state-of-the-art test benches. Products cover light motor vehicles, heavy duty vehicles and earth moving equipment.</p>
           <a class="btn btn-primary" href="contact.html">Request electrical quote &rarr;</a>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- ═══ HYDRAULICS ═══ -->
   <section class="section" id="hydraulics" aria-labelledby="hyd-h2">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
-        <div class="reveal">
+      <div class="split split--media-right">
+        <div class="split-media reveal"><figure class="media "><img src="images/hydraulic-cylinder-harare.jpg" alt="Hydraulic cylinder reconditioning and pressure testing Harare" width="540" height="960" loading="lazy" decoding="async"></figure></div>
+        <div class="split-body reveal reveal-d1">
           <span class="text-eyebrow">Service 05</span>
           <h2 class="text-h2" id="hyd-h2">Hydraulic cylinder reconditioning</h2>
-          <p class="text-body" style="margin-bottom:16px">Complete reconditioning of hydraulic cylinders done in partnership with competent partners using dimensional reclamation equipment to save on costs.</p>
-          <p class="text-body" style="margin-bottom:24px">Stock of hydraulic seals and induction hardened shafts are kept for fast turnaround. Every hydraulic cylinder is thoroughly tested on our test bench for bypass and leaks at operating pressures as a quality control measure.</p>
+          <p class="text-body">Complete reconditioning of hydraulic cylinders done in partnership with competent partners using dimensional reclamation equipment to save on costs.</p>
+          <p class="text-body">Stock of hydraulic seals and induction hardened shafts are kept for fast turnaround. Every hydraulic cylinder is thoroughly tested on our test bench for bypass and leaks at operating pressures as a quality control measure.</p>
           <a class="btn btn-primary" href="contact.html">Request hydraulic quote &rarr;</a>
-        </div>
-        <div class="reveal reveal-d1" aria-hidden="true">
-          <img src="images/hydraulic-cylinder-harare.jpg" alt="Hydraulic cylinder reconditioning and pressure testing Harare" width="800" height="600" loading="lazy" style="width:100%;border-radius:var(--r-lg);display:block">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ MINING & ENGINEERING ═══ -->
   <section class="section section-alt" id="mining-spares" aria-labelledby="mining-h2">
     <div class="container">
       <div class="section-header reveal">
@@ -223,7 +217,7 @@
         <h2 class="text-h2" id="mining-h2">Mining spares &amp; mechanical engineering services</h2>
         <p class="text-lead">Just-in-time parts sourcing and a full range of mechanical engineering services for mining, agriculture and industry across Zimbabwe.</p>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+      <div class="grid-2">
         <div class="ref-card reveal">
           <div class="ref-lime" aria-hidden="true"></div>
           <h3 class="text-h4" style="margin-bottom:12px">Automotive &amp; Mining Spares</h3>
@@ -236,7 +230,7 @@
         <div class="ref-card reveal reveal-d1">
           <div class="ref-lime" aria-hidden="true"></div>
           <h3 class="text-h4" style="margin-bottom:12px">Mechanical Engineering</h3>
-          <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <div class="tag-cloud">
             <span class="service-tag">Mechanical maintenance</span>
             <span class="service-tag">Labour broking</span>
             <span class="service-tag">Warman slurry pumps</span>
@@ -257,7 +251,6 @@
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta-band" aria-label="Get a quote">
     <div class="container">
       <div class="cta-band-inner">
@@ -278,27 +271,30 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="images/logo.png" alt="Lysam Turbo and Diesel" class="footer-brand-logo" width="140" height="47" loading="lazy">
-        <p class="footer-brand-desc">A wholly owned Zimbabwean company founded on Reliability, Responsiveness, Empathy and Communication. Global engineering standards in Harare since 2021.</p>
+        <img src="images/logo.png" alt="Lysam Turbo and Diesel" class="footer-brand-logo"
+             width="140" height="47" loading="lazy">
+        <p class="footer-brand-desc">A wholly owned Zimbabwean company founded on Reliability,
+        Responsiveness, Empathy and Communication. Bringing global engineering standards to
+        Harare and Zimbabwe since 2021.</p>
         <p class="footer-reg">Reg. No. 23089/2021 &middot; Harare, Zimbabwe</p>
       </div>
       <div>
         <p class="footer-col-heading">Services</p>
         <ul class="footer-nav-list" role="list">
-          <li><a href="services.html">Turbochargers</a></li>
-          <li><a href="services.html">Diesel Pumps &amp; Injectors</a></li>
-          <li><a href="services.html">Engine Reconditioning</a></li>
-          <li><a href="services.html">Auto Electrics</a></li>
-          <li><a href="services.html">Hydraulic Cylinders</a></li>
-          <li><a href="services.html">Mining &amp; Agri Spares</a></li>
+          <li><a href="services.html#turbochargers">Turbochargers</a></li>
+          <li><a href="services.html#diesel-pumps">Diesel Pumps &amp; Injectors</a></li>
+          <li><a href="services.html#engine-recon">Engine Reconditioning</a></li>
+          <li><a href="services.html#auto-electrics">Auto Electrics</a></li>
+          <li><a href="services.html#hydraulics">Hydraulic Cylinders</a></li>
+          <li><a href="services.html#mining-spares">Mining &amp; Agri Spares</a></li>
         </ul>
       </div>
       <div>
         <p class="footer-col-heading">Company</p>
         <ul class="footer-nav-list" role="list">
           <li><a href="about.html">About us</a></li>
-          <li><a href="about.html">Our team</a></li>
-          <li><a href="about.html">Client references</a></li>
+          <li><a href="about.html#team">Our team</a></li>
+          <li><a href="about.html#references">Client references</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -320,12 +316,18 @@
     </div>
   </div>
 </footer>
-<a class="wa-float" href="https://wa.me/263773125505?text=Hi%2C%20I%27d%20like%20to%20request%20a%20quote%20from%20Lysam%20Turbo%20%26%20Diesel."
-   target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+<a class="wa-float"
+   href="https://wa.me/263773125505?text=Hi%2C%20I%27d%20like%20to%20request%20a%20quote%20from%20Lysam%20Turbo%20%26%20Diesel."
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp">
   <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.116 1.528 5.845L.057 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.028-1.383l-.36-.214-3.742.981.997-3.648-.235-.374A9.77 9.77 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.116 1.528 5.845L.057 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.028-1.383l-.36-.214-3.742.981.997-3.648-.235-.374A9.77 9.77 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/>
   </svg>
 </a>
+<div class="action-bar" role="region" aria-label="Quick contact">
+  <a class="action-bar-btn" href="tel:+263773125505"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call</a>
+  <a class="action-bar-btn action-bar-btn--wa" href="https://wa.me/263773125505?text=Hi%2C%20I%27d%20like%20to%20request%20a%20quote%20from%20Lysam%20Turbo%20%26%20Diesel." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.116 1.528 5.845L.057 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.028-1.383l-.36-.214-3.742.981.997-3.648-.235-.374A9.77 9.77 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg> WhatsApp</a>
+  <a class="action-bar-btn action-bar-btn--primary" href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg> Quote</a>
+</div>
 <script src="js/main.js" defer></script>
 </body></html>
